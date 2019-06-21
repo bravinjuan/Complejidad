@@ -1,0 +1,32 @@
+import random
+import math
+
+print('Ingrese tamano del tablero')
+size = int(input())
+cantsoluciones = math.factorial((size-1)*2) // (math.factorial(size-1)*math.factorial(size-1)) #calculamos la cantidad de soluciones dependiendo del tamano del tablero
+caminos = [[0]*2 for x in range(cantsoluciones)] #aca guardamos todos los caminos y la cantidad de quesos
+
+def solucion():
+	
+	
+def soluciones(camino,cont):
+			
+
+tablero = [[0]*size for x in range(size)] #creamos el tablero
+random.seed()
+cantqueso = random.randint(2,(size*size)-1)
+for i in range(1,cantqueso+1): #ponemos el queso en el tablero
+	random.seed()
+	posx = random.randint(0, (size)-1)
+	posy = random.randint(0, (size)-1)
+	while (tablero[posx][posy] == 1):
+		posx = random.randint(0, (size)-1)
+		posy = random.randint(0, (size)-1)
+	tablero[posx][posy] = 1
+print(tablero)
+posx = 0 #inicializamos las variables para comenzar la busqueda
+posy = 0
+camino = []
+cont = 0
+nivel = 0
+solucion()
